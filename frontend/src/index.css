@@ -7,11 +7,11 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  font-synthesis: none;
+  /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; */
   
 }
 
@@ -31,6 +31,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   justify-content: flex-end;
+
+  font-family: 'Bai Jamjuree', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
 }
 
 h1 {
@@ -69,3 +74,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* body {
+  margin: 0;
+  font-family: 'Bai Jamjuree', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+}
+* {
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+code {
+  font-family: 'Bai Jamjuree', sans-serif;
+} */
