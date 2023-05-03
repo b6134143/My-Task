@@ -5,12 +5,44 @@
   height: 100vh;
 }
 
+body {
+  font-family: 'Itim', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+}
+
+* {
+  font-family: 'Itim', cursive !important;
+}
+
+code {
+  font-family: 'Itim', cursive;
+}
+
 .Navbar {
-  height: 50px;
+  /* height: 50px; */
   background-color: black;
   position: fixed;
-  width: 2000px;
+  width: 100vw;
   z-index: 1;
+  display: flex;
+  left: 0px;
+
+  /* height: auto;
+  flex-direction: column;
+  align-items: flex-start; */
+}
+
+.All-menu {
+  margin-left: auto;
+}
+
+.menu-bar {
+  width: 400px;
+  justify-content: flex-end;
+  left: 0px;
+
 }
 
 .Content {
@@ -38,17 +70,61 @@
   border-radius: 50px;
 }
 
-/* .mig {
-  width: 30rem;
+
+
+/*hamburger menu css*/
+
+.ham-menu {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
 }
 
-main {
-  max-width: 40rem;
-  margin: 0 auto;
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
-.grid {
-  margin-bottom: 3rem;
-display: grid
-grid-template-columns repeat(auto-fit,minmax(200px,1fr));
-} */
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.menu-bar-active {
+  display: block !important;
+}
+
+@media only screen and (min-width:500px) {
+  .ham-menu {
+    display: none;
+    right: 1rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .menu-bar {
+    display: none;
+  }
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

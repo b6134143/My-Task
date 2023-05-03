@@ -6,16 +6,18 @@ function SiteFooter() {
     const IconFont = createFromIconfontCN({
         scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
     });
-    return (
-        <div>
-            <Footer style={{ textAlign: 'center', backgroundColor: '#000000', color: '#FFFFFF', height: '60px', marginTop: '60px', padding: '1px' }}>
-                <h2><Row>
-                    <Col span={8}>ข้อมูลบริษัท</Col>
-                    <Col span={8}>ช่วยเหลือและสนับสนุน</Col>
-                    <Col span={8}>ฝ่ายบริการ</Col>
-                </Row></h2>
-            </Footer>
 
+    return (
+        <div >
+            <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                <Footer style={{ textAlign: 'center', backgroundColor: '#000000', color: '#FFFFFF', height: '60px', marginTop: '60px', padding: '1px' }}>
+                    <h2><Row>
+                        <Col span={8}>ข้อมูลบริษัท</Col>
+                        <Col span={8}>ช่วยเหลือและสนับสนุน</Col>
+                        <Col span={8}>ฝ่ายบริการ</Col>
+                    </Row></h2>
+                </Footer>
+            </Col>
             <Footer style={{ textAlign: 'center', padding: '5px', backgroundColor: '#000000', color: '#FFFFFF' }}>
                 <Row>
                     <Col span={8}>การเข้าร่วม</Col>

@@ -1,10 +1,15 @@
 import React from "react";
-import { QRCode } from 'antd';
+import { QRCode,Col,Row } from 'antd';
 function Contact() {
 
     return (
         <div>
-            <h1><QRCode value="https://ant.design/" size={400} style={{ marginLeft: '500px',marginTop:'100px'}}/></h1>
+            <Row>
+            <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                <QRCode value="https://ant.design/" style={{ marginLeft: '500px', marginTop: '120px', width: 'auto', height: '800px' }} />
+                </Col>
+
+            </Row>
         </div>
     )
 }

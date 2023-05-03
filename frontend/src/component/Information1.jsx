@@ -14,12 +14,12 @@ function Information1() {
     return (
         <div>
             <Row>
-                <Col span={5} style={{ marginTop: '100px', marginLeft: '90px' }}>
+                <Col span={5} style={{ marginTop: '130px', marginLeft: '90px' }}>
                     <Image
                         width={400}
                         src={b1}
                     /></Col>
-                <Col span={11} style={{ marginLeft: '200px', marginTop: '70px' }}>
+                <Col span={11} style={{ marginLeft: '200px', marginTop: '100px' }}>
                     <h1> เสื้อสวมหัวลายกราฟิกตัวอักษร </h1>
                     <h1 style={{ color: '#FF4500' }}> ฿250   <Text delete style={{ color: '#BEBEBE', fontSize: 25 }}>฿330</Text> <Button style={{ backgroundColor: '#000000' }} type="primary">-24%</Button></h1>
                     <h2> Color : </h2>

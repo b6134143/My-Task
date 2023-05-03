@@ -17,7 +17,7 @@ function CreateProduct() {
     return (
         <div>
             <Row>
-                <Col span={12}><Image style={{ marginTop: '100px', marginLeft: '160px' }}
+                <Col span={12}><Image style={{ marginTop: '130px', marginLeft: '160px' }}
                     width={350}
                     src={b6}
                 />

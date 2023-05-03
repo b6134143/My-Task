@@ -8,8 +8,6 @@ function getProductById(id) {
     .then((response) => response.data)
 }
 
-
-
 function Api1() {
 
   const navigate = useNavigate();
@@ -39,7 +37,7 @@ function Api1() {
   return (
     <div style={{ justifyContent: 'center', display: 'flex', marginTop: 80 }}>
       <div className='productDetail' style={{ backgroundColor: '#f5f5f5', width: '90%', borderRadius: '10px' }}>
-        <Row style={{ marginTop: '20px', marginBottom: '20px', justifyContent: 'left' }} gutter={[16, 16]}>
+        <Row style={{ marginTop: '50px', marginBottom: '20px', justifyContent: 'left' }} gutter={[16, 16]}>
           <Col xs={2} sm={4} md={6} lg={8} xl={10} span={8} >
             <Image
               src={product.thumbnail}
@@ -81,7 +79,7 @@ function Api1() {
               <Rate value={product.rating} allowHalf disabled={true} style={{ marginBottom: 70 }} />
             </div>
             <div>
-              <Button style={{ color: '#FFFFFF', backgroundColor: '#000000', marginRight: 20, border: '3px solid #00C754' }}>
+              <Button style={{ color: '#FFFFFF', backgroundColor: '#000000', marginRight: 20, border: '2px solid #00C754' }}>
                 Add to cart
               </Button>
               <Button style={{ color: '#FFFFFF', background: '#000000' }}
@@ -93,17 +91,7 @@ function Api1() {
           </Col>
 
         </Row>
-        <Row>
-          <Col xs={2} sm={4} md={6} lg={8} xl={10}>
-            Col 55555
-          </Col>
-          <Col xs={20} sm={16} md={12} lg={8} xl={4}>
-            Col
-          </Col>
-          <Col xs={2} sm={4} md={6} lg={8} xl={10}>
-            Col
-          </Col>
-        </Row>
+
       </div>
     </div>
 

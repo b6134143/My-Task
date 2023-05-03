@@ -15,8 +15,8 @@ function About() {
   return (
     <div style={{ marginTop: 50 }}>
       {data ? (
-        <Col span={5} align="middle">
-          <Space direction="vertical" size={16} style={{ marginTop: '20px' }} >
+        <Col xs={24} sm={24} md={12} lg={8} xl={6} span={5} align="middle">
+          <Space direction="vertical" size={16} style={{ marginTop: '80px' }} >
             <Card
               hoverable
               title={data.title}
