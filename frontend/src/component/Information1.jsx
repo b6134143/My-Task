@@ -19,7 +19,7 @@ function Information1() {
                         width={400}
                         src={b1}
                     /></Col>
-                <Col span={11} style={{ marginLeft: '200px', marginTop: '100px' }}>
+                <Col span={11} style={{ marginLeft: '200px', marginTop: '100px',color:'#000000' }}>
                     <h1> เสื้อสวมหัวลายกราฟิกตัวอักษร </h1>
                     <h1 style={{ color: '#FF4500' }}> ฿250   <Text delete style={{ color: '#BEBEBE', fontSize: 25 }}>฿330</Text> <Button style={{ backgroundColor: '#000000' }} type="primary">-24%</Button></h1>
                     <h2> Color : </h2>
@@ -94,7 +94,8 @@ function Information1() {
                     <Image style={{ marginTop: '10px', marginLeft: '210px' }}
                         width={70}
                         src={b11111}
-                    /></Col>
+                    />
+                </Col>
             </Row>
         </div>
     )

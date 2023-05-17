@@ -1,8 +1,10 @@
 import React from 'react';
-import { Image, Input, Col, Row, Divider, Select, Space, Button, Upload, Cascader, InputNumber } from 'antd';
+import { Image, Input, Col, Row, Divider, Select, Space, Button, Upload, Cascader, InputNumber, Card } from 'antd';
 <Input placeholder="Basic usage" />;
 import { UploadOutlined } from '@ant-design/icons';
-import b6 from './pic/b6.jpg';
+import { DownloadOutlined, UserOutlined } from '@ant-design/icons';
+import z1 from './pic/z1.jpg';
+import { useState } from 'react';
 function CreateProduct() {
     const onChange = (value) => {
         console.log('changed', value);
@@ -15,48 +17,88 @@ function CreateProduct() {
         },
     ];
     return (
-        <div>
-            <Row>
-                <Col span={12}><Image style={{ marginTop: '130px', marginLeft: '160px' }}
-                    width={350}
-                    src={b6}
-                />
-                    <Row style={{ marginTop: '37px', marginLeft: '300px' }}>
-                        <Button icon={<UploadOutlined />}>Upload</Button>
-                    </Row>
+        <>
+            <Row div={[16, 16]}>
+                <Col xs={24} sm={24} md={24} lg={12} xl={12} >
+                    <div style={{ marginTop: '120px', display: 'flex', justifyContent: 'center' }} >
+                        <Card
+                            hoverable
+                            title="รูปภาพ"
+                            style={{
+                                width: '250',
+                                marginLeft: 'auto',  // กำหนด marginLeft เป็น 'auto'
+                                marginRight: 'auto', // กำหนด marginRight เป็น 'auto'
+                                textAlign: 'center'  // กำหนด textAlign เป็น 'center'
+                            }}
+                        >
+                            <Image
+                                width={200}
+                                src={z1}
+                            />
+                            <p > อัพโหลดรูปภาพ </p>
+                            <Row style={{ marginTop: '37px', marginLeft: '50px' }}>
+                                <Button icon={<UploadOutlined />}> Upload </Button>
+                            </Row>
+                        </Card>
+                    </div>
                 </Col>
 
-                <Col span={12}>
-                    <div style={{ display: 'flex', marginTop: '120px', alignItems: 'center' }}>
-                        <p style={{ marginRight: '80px' }}>ชื่อสินค้า</p><Input placeholder=" " style={{ width: 400 }} />
+                <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                    <div style={{ marginTop: '120px', width: '60%', padding: '20px', color: '#000000' }}>
+
+                        <Row gutter={[16, 16]} justify={'center'}>
+
+                            <Col xs={24} sm={24} md={24} lg={24} xl={4} >
+                                <div style={{ marginTop: '5px' }}> ชื่อสินค้า </div>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={20} >
+                                <Input placeholder=" " />
+                            </Col>
+
+                            <Col xs={24} sm={24} md={24} lg={24} xl={4} >
+                                <div style={{ marginTop: '5px' }}> รหัสสินค้า </div>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={20} >
+                                <Input placeholder=" " />
+                            </Col>
+
+                            <Col xs={24} sm={24} md={24} lg={24} xl={4} >
+                                <div style={{ marginTop: '5px' }}>ประเภทสินค้า</div>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={20} >
+                                <Cascader options={options} onChange={onChange} placeholder="กรุณาเลือก" style={{ width: '100%' }} />
+                            </Col>
+
+                            <Col xs={24} sm={24} md={24} lg={24} xl={4} >
+                                <div style={{ marginTop: '5px' }}>รายละเอียดสินค้า</div>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={20} >
+                                <TextArea rows={4} placeholder="กรุณากรอก" maxLength={6} />
+                            </Col>
+
+                            <Col xs={24} sm={24} md={24} lg={24} xl={4} >
+                                <div style={{ marginTop: '5px' }}> ราคาสินค้า </div>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={20} >
+                                <Input placeholder=" " />
+                            </Col>
+
+                            <Col xs={24} sm={24} md={24} lg={24} xl={4} >
+                                <div style={{ marginTop: '5px' }}> จำนวนสินค้า </div>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={24} xl={20} style={{ display: 'flex', alignItems: 'center' }}>
+                                <InputNumber min={1} max={10} defaultValue={3} onChange={onChange} />
+                                <div style={{ marginLeft: '30px' }}> เมล็ด </div>
+                            </Col>
+
+                        </Row>
+
                     </div>
-                    <div style={{ display: 'flex', marginTop: '10px', alignItems: 'center' }}>
-                        <p style={{ marginRight: '74px' }}>รหัสสินค้า</p><Input placeholder=" " style={{ width: 400 }} />
-                    </div>
-                    <div style={{ display: 'flex', marginTop: '10px', alignItems: 'center' }}>
-                        <p style={{ marginRight: '55px' }}>ประเภทสินค้า</p><Cascader options={options} onChange={onChange} placeholder="กรุณาเลือก" />
-                    </div>
-                    <div style={{ display: 'flex', marginTop: '10px', alignItems: 'center' }}>
-                        <p style={{ marginRight: '33px' }}>รายละเอียดสินค้า</p><TextArea style={{ width: 400 }} rows={4} placeholder="กรุณากรอก" maxLength={6} />
-                    </div>
-                    <div style={{ display: 'flex', marginTop: '10px', alignItems: 'center' }}>
-                        <p style={{ marginRight: '70px' }}>ราคาสินค้า</p><Input placeholder=" " style={{ width: 400 }} />
-                    </div>
-                    <div style={{ display: 'flex', marginTop: '10px', alignItems: 'center' }}>
-                        <p style={{ marginRight: '60px' }}>จำนวนสินค้า</p><InputNumber min={1} max={10} defaultValue={3} onChange={onChange} />
-                        <p style={{ marginLeft: '30px' }}>ตัว</p>
-                    </div>
-                    <Row>
-                        <Col span={5}><Button type="primary" size={10} style={{ background: '#000000', Color: '#FFFFFF', marginLeft: '380px', marginTop: '20px' }}>
-                            เพิ่มสินค้า
-                        </Button></Col>
-                        <Col span={5}><Button size={10} style={{ background: '#FFFFFF', Color: '#000000', marginLeft: '325px', marginTop: '20px' }}>
-                            ล้าง
-                        </Button></Col>
-                    </Row>
+
                 </Col>
+
             </Row>
-        </div>
+        </>
 
     );
 }

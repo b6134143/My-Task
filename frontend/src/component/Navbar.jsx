@@ -10,7 +10,7 @@ function Navbar() {
         let myMenu = document.getElementById('myMenu');
         if (myMenu.className === 'menu-bar') {
             setClicktoggle(true)
-            myMenu.className += ' menu-bar-active'
+            myMenu.className += 'menu-bar-active'
         } else {
             setClicktoggle(false)
             myMenu.className = 'menu-bar';
@@ -88,8 +88,8 @@ function Navbar() {
 
         </div>
 
-
     );
+
 }
 export default Navbar
 
