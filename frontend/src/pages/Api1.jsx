@@ -35,7 +35,7 @@ function Api1() {
   }
 
   return (
-    <div style={{ justifyContent: 'center', display: 'flex', marginTop: 80 }}>
+    <div style={{ justifyContent: 'center', display: 'flex', marginTop: 130,color:'#000000' }}>
       <div className='productDetail' style={{ backgroundColor: '#f5f5f5', width: '90%', borderRadius: '10px' }}>
         <Row style={{ marginTop: '50px', marginBottom: '20px', justifyContent: 'left' }} gutter={[16, 16]}>
           <Col xs={2} sm={4} md={6} lg={8} xl={10} span={8} >

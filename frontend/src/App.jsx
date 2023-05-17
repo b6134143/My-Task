@@ -25,7 +25,7 @@ function App() {
         <Route path='/Api1/:id' element={<Api1 />} />
       </Routes>
 
-      <Footer/>
+      <Footer />
 
     </div>
   )

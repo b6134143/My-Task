@@ -7,8 +7,6 @@
 
 body {
   font-family: 'Itim', cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
 }
 
@@ -42,7 +40,6 @@ code {
   width: 400px;
   justify-content: flex-end;
   left: 0px;
-
 }
 
 .Content {
@@ -52,7 +49,7 @@ code {
 }
 
 .Footer {
-  height: 60px;
+  height: 0px;
   background-color: black;
 }
 
@@ -127,4 +124,49 @@ code {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* hover */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  background:
+    linear-gradient(to right,
+      rgb(7, 7, 7),
+      rgb(12, 12, 12)),
+    linear-gradient(to right,
+      rgb(1, 226, 16),
+      rgb(197, 244, 27),
+      rgb(200, 40, 0));
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+/* :hover
+
+a {
+  box-shadow: inset 0 0 0 0 #51df6b;
+  color: #54d661;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+a:hover {
+  box-shadow: inset 100px 0 0 0 #f9fafa;
+  color: white;
+} */
+
+
+/* ปิดตัวโฮเว่อข้างล่างตัวหนังสือ */
+.ant-menu-light.ant-menu-horizontal>.ant-menu-item::after {
+  border-bottom: 0px;
 }
